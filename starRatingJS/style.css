@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.rating-box {
+    height: 100px;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    height: 150px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: darkgreen;
+}
+.active {
+    color: orange;
+}
+.hover {
+    color: orange;
+    transform: scale(1.3);
+}

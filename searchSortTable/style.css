@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+div {
+    text-align: center;
+}
+
+table {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+
+.red {
+    background-color: rgb(255, 116, 116);
+}
+
+
+.orange {
+    background-color: pink;
+}
