@@ -69,4 +69,4 @@ document.getElementById("nameHeader").addEventListener("click", sortByName);
 //sorting by age
 //paginated view -->page size 5,10,15 with dropdown
 //edit option in age -->input field 
-//git push
+
