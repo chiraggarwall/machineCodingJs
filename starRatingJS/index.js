@@ -1,34 +1,44 @@
 const stars = document.querySelectorAll("i");
 const rating = document.querySelector(".rating");
+const starContainer = document.querySelector(".stars");
 
-stars.forEach((star, index1) => {
-  console.log(index1);
-  star.addEventListener("click", (e) => {
+starContainer.addEventListener("click", (e) => {
+  if (e.target.tagName === "I") {
+    const index1 = Array.from(stars).indexOf(e.target);
     rating.innerText = index1 + 1;
-    console.log(index1);
-    stars.forEach((star, index2) => {
-      console.log(index2);
-      if (index1 >= index2) {
+    console.log(rating);
+    stars.forEach((star, index) => {
+      if (index1 >= index) {
         star.classList.add("active");
       } else {
         star.classList.remove("active");
       }
     });
-  });
+  }
+});
 
-  star.addEventListener("mouseover", () => {
-    stars.forEach((star, index2) => {
-      if (index1 >= index2) {
+starContainer.addEventListener("mouseover", (e) => {
+  if (e.target.tagName === "I") {
+    const index1 = Array.from(stars).indexOf(e.target);
+
+    // Temporarily highlight stars on hover
+    stars.forEach((star, index) => {
+      if (index1 >= index) {
         star.classList.add("hover");
+      } else {
+        star.classList.remove("hover");
       }
     });
-  });
+  }
+});
 
-  star.addEventListener("mouseout", () => {
+starContainer.addEventListener("mouseout", (e) => {
+  if (e.target.tagName === "I") {
+    // Remove 'hover' class when the mouse leaves the stars
     stars.forEach((star) => {
       star.classList.remove("hover");
     });
-  });
+  }
 });
 
 //apply listener on each star
