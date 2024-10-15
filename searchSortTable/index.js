@@ -2,7 +2,7 @@ let tablebody = document.querySelector("#userTable tbody");
 let users = [];
 let updatedUser = [];
 let nameSortOrder = `asc`;
-let pageSize = 5;
+let pageSize = 3;
 let currentPage = 1;
 let loading = document.getElementById("loading");
 async function fetchUsers() {
